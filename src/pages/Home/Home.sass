@@ -1,0 +1,84 @@
+@import ../../assets/sass/helpers/mixin
+@import ../../assets/sass/helpers/variables
+
+.hero-container
+    position: relative
+    display: block
+    width: 100%
+    padding: 100px 1.5rem
+    background-color: $black
+    color: $white
+    text-align: center
+    #particles-js
+        position: absolute
+        height: 100%
+        width: 100%
+        left: 0
+        top: 0
+        opacity: .6
+
+    .adaphan-logo
+        position: relative
+        display: block
+        height: 150px
+        margin-bottom: 20px
+        @include mq-max($mobile)
+            height: 90px
+        img
+            height: 100%
+        
+    .vy-btn.bordered
+        margin: 10px
+        border-color: transparentize($white, .5)
+        &:hover
+            background-color: transparentize($white, .9) !important
+            border-color: $white
+
+.partner-container
+    position: relative
+    padding: 50px 0
+    background-color: #f5f5f5
+    text-align: center
+
+    .partner-list
+        margin: 0
+        padding: 0
+
+    .partner-list, .partner-list *
+        display: inline-block
+        vertical-align: middle
+
+        li
+            display: inline-block
+            height: 144px
+            width: 288px
+            border: 1px solid rgba(0,0,0,.06)
+            margin: 3px 10px
+            background-color: #fefefe
+            border-radius: 2px
+            background-position: center center
+            background-size: 70% auto
+            background-repeat: no-repeat
+            filter: grayscale(100%)
+            opacity: .8
+            transition: .3s ease
+            cursor: pointer
+            &:hover
+                opacity: 1
+                filter: none
+
+.about-container,
+.rate-container
+    position: relative
+    display: block
+    padding: 90px 0
+    // background-color: transparentize(#212121, .8)
+    background-position: bottom right
+    background-size: cover
+    background-attachment: fixed
+
+    .vy-card
+        transition: .3s ease
+
+    .vy-card:hover
+        transform: translateY(-5px)

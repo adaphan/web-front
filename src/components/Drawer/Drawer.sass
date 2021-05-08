@@ -1,0 +1,21 @@
+@import ../../assets/sass/helpers/mixin
+@import ../../assets/sass/helpers/variables
+
+.vy-drawer
+    position: fixed
+    display: block
+    width: 25%
+    height: 100%
+    background-color: $white
+    padding: 10px 1rem
+    top: 0
+    left: -120%
+    border-right: 1px solid #eee
+    z-index: 100
+    transition: left .3s ease
+
+    &.visible
+        left: 0
+
+    @include mq-max($mobile)
+        width: 70%

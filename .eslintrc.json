@@ -1,0 +1,41 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "arrow-body-style": [
+            "warn",
+            "always"
+        ],
+        "max-len": 0,
+        "comma-dangle": ["error", "never"],
+        "indent": ["error", 4],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-indent": ["error", 4],
+        "react/prop-types": 0,
+        "react/no-unused-state": 0,
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ],
+        "jsx-a11y/click-events-have-key-events": 0
+    }
+}

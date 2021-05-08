@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono&display=swap')
+@import ../helpers/mixin
+@import ../helpers/variables
+
+*,
+*::before,
+*::after
+    box-sizing: border-box
+
+#root
+    padding: 80px 0 0
+body
+    padding: 0
+    width: 100%
+    font-family: $font-family
+    font-size: map-get($font-size, base)
+    background-color: $white
+    color: map-get($grey, darken)
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    overflow-x: hidden
+    &.no-scroll
+        overflow-x: hidden
+        overflow-y: hidden
+
+a
+    color: $primary
+    text-decoration: none
+    &:hover
+        color: $primary-dark
+
+.vy-overlay
+    position: fixed
+    display: block
+    width: 100%
+    height: 100%
+    background-color: transparentize($black, .6)
+    top: 0
+    left: 0
+    opacity: 0
+    transition: .3s ease
+    &.hidden
+        visibility: hidden
+        z-index: -100
+    &.visible
+        opacity: 1
+        visibility: visible
+        z-index: 99
+
+.feather
+    width: 20px
+    height: 20px
+    vertical-align: middle
+
+.floating-whatsapp
+    position: fixed
+    bottom: 20px
+    right: 1rem
+    padding: 10px
+    background-color: $white
+    border-radius: 50px
+    box-shadow: 0 3px 6px 3px rgba(0, 0, 0, .1)
+    cursor: pointer
+
+    img
+        width: 55px
+        height: 55px
+
+    span.info
+        position: absolute !important
+        display: inline-block
+        white-space: nowrap
+        border-radius: 4px
+        background: #fff
+        height: 40px
+        line-height: 40px
+        padding: 0 15px
+        text-align: center
+        right: calc(100% + 15px)
+        bottom: 10px
+        color: rgba(0, 0, 0, .6)
+        box-shadow: 0 3px 6px 3px rgba(0, 0, 0, .1)
+        @include mq-max($mobile)
+            display: none
+
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            right: -17px
+            border: 10px solid
+            border-color: transparent transparent transparent #fff
+            transform: translateY(-50%)
+
+@import ./_button
+@import ./_card
+@import ./_dropdown
+@import ./_nav
+@import ./_text
+
+.color-white
+    color: $white !important
+
+.color-black
+    color: $black !important

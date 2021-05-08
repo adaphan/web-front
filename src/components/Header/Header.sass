@@ -1,0 +1,98 @@
+@import ../../assets/sass/helpers/mixin
+@import ../../assets/sass/helpers/variables
+
+.vy-header
+    position: absolute
+    display: block
+    width: 100%
+    height: auto
+    padding: 10px 1.5rem
+    top: 0
+    left: 0
+    background-color: $black
+    color: $white
+    box-shadow: 0 0 3px 5px rgba(0, 0, 0, .2)
+    transition: .3s ease
+    z-index: 99
+
+    &.fixed-scroll
+        position: fixed
+        box-shadow: 0 3px 10px 8px rgba(0, 0, 0, .03)
+        animation: header-in .3s ease
+
+    .vy-header-container
+        position: relative
+        display: flex
+        width: 100%
+        height: 60px
+        flex-direction: row
+        justify-content: space-between
+        align-content: center
+        align-items: center
+
+        [class*="vy-header-"]
+            position: relative
+            display: inline-block
+            height: auto
+            flex-basis: 40%
+            @include mq-max($mobile)
+                flex-basis: 25%
+
+        .vy-header-left
+            align-content: center
+
+        .vy-header-right
+            text-align: right
+
+            .vy-nav-menu
+                justify-content: flex-end
+                align-content: center
+                a, [role="button"]
+                    color: $white
+                    &::before
+                        content: ""
+                        position: absolute
+                        width: 0
+                        height: 2px
+                        bottom: 25%
+                        right: 0
+                        left: auto
+                        background-color: $white
+                        opacity: .8
+                        transition: .2s ease
+                    &:hover::before
+                        width: 100%
+                        right: auto
+                        left: 0
+                @include mq-max($mobile)
+                    display: none !important
+
+.vy-hamburger
+    position: relative
+    display: none
+    width: auto
+    padding: 5px
+    cursor: pointer
+    text-align: right
+    div
+        position: relative
+        display: block
+        width: 30px
+        height: 2px
+        background-color: $white
+        &:first-child,
+        &:last-child
+            width: 20px
+        &:last-child
+            margin-top: 7.5px
+        &:first-child
+            margin-bottom: 7.5px
+
+    @include mq-max($mobile)
+        display: inline-block
+
+@keyframes header-in
+    0%
+        top: -120px
+    100%
+        top: 0
