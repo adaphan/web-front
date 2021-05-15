@@ -54,7 +54,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
 ${component}
-<script src="/static/app.91fa9965b44ea3764348.js"></script>
+<script src="/static/app.5a4233626992c55d9daf.js"></script>
 </body>
 </html>`;
     if (context.url) {
