@@ -15,7 +15,7 @@ const Footer = () => {
                     <div className="col-12 col-md-4 mb-3">
                         <h5 className="vy-text">Jam Operasional</h5>
                         <p className="vy-text">
-                            Buka setiap hari (Senin - Juma&apos;at).
+                            Buka setiap hari (Senin - Minggu).
                             <br />
                             Jam 09:00 - 03:00
                         </p>
