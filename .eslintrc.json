@@ -32,6 +32,7 @@
         "react/no-unused-state": 0,
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
+        "react/jsx-props-no-spreading": 0,
         "react/jsx-indent-props": [
             "error",
             4

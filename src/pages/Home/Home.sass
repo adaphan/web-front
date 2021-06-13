@@ -76,9 +76,13 @@
     background-position: bottom right
     background-size: cover
     background-attachment: fixed
+    
+    .slick-arrow::before
+        color: $black
+
+    .slick-slide
+        padding: 20px
 
     .vy-card
         transition: .3s ease
-
-    .vy-card:hover
-        transform: translateY(-5px)
+        outline: none

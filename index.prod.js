@@ -11,7 +11,7 @@ import App from './src/App';
 
 dotenv.config();
 const app = express();
-const PORT = process.env.APP_PORT;
+const PORT = 3305;
 
 app.use('/static', express.static(path.resolve(__dirname, 'assets')));
 app.use('/assets', express.static(path.resolve(__dirname, 'assets/file')));
@@ -44,6 +44,8 @@ app.get('/*', (req, res) => {
 <meta property="og:url" content="https://adaphan.com">
 <meta property="og:title" content="Adaphan Exchanger">
 <meta property="og:description" content="Adaphan Penukaran Digital - Partner Resmi Jual Beli Voucher Indodax">
+<link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

@@ -6,7 +6,7 @@ import './Home.sass';
 import AboutComponent from './thisComponents/About';
 import HeroComponent from './thisComponents/Hero';
 import PartnerComponent from './thisComponents/Partner';
-// import RateComponent from './thisComponents/Rate';
+import RateComponent from './thisComponents/Rate';
 
 const Home = () => {
     return (
@@ -14,7 +14,7 @@ const Home = () => {
             <HeroComponent />
             <AboutComponent />
             <PartnerComponent />
-            {/* <RateComponent /> */}
+            <RateComponent />
         </Main>
     );
 };
